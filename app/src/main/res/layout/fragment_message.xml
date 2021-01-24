@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageFragment"
+    android:background="@color/SkyBlue"
+    android:orientation="vertical"
+    android:id="@+id/activityRoot"
+    android:paddingTop="10dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_above="@id/layoutBottom"
+        />
+    <EditText
+        android:id="@+id/edSender"
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:textColor="@color/black"
+        android:maxLines="3"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_chat2"
+        android:padding="8dp"
+        android:layout_margin="5dp"
+        android:layout_toStartOf="@id/edReceiver"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@id/layoutBottom"/>
+    <EditText
+        android:id="@+id/edReceiver"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:textColor="@color/black"
+        android:maxLines="3"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_chat2"
+        android:padding="8dp"
+        android:layout_margin="5dp"
+
+        android:layout_above="@id/layoutBottom"/>
+    <RelativeLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+
+        <EditText
+            android:id="@+id/edMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@id/btnUpload"
+            android:background="@drawable/bg_chat2"
+            android:maxLines="3"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/btnUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/ic_gallery"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/btnSend"
+            app:tint="@color/CornflowerBlue" />
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gửi"
+            android:backgroundTint="@color/HotPink"
+            android:layout_margin="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>
